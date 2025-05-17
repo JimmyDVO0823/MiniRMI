@@ -16,7 +16,7 @@ import java.rmi.registry.LocateRegistry;
 public class Invocador {
     public static void main(String[] args) {
         try {
-            Registry reg = LocateRegistry.getRegistry("localhost",3232);
+            Registry reg = LocateRegistry.getRegistry("192.168.80.22",3232);
             IServer objetoRemoto = (IServer) reg.lookup("rmiserver");
             
             String saludo = objetoRemoto.darBienvenida("DFRANCO");
